@@ -1,13 +1,15 @@
-sudo: false
-
 language: node_js
 
-node_js:
-  - "node"
+os:
+- linux
+- osx
 
 before_install:
   - git submodule update --init --recursive
 
+script:
+  - npm run prebuild
+
 branches:
   only:
-    - master
+    - add_prebuild_support
