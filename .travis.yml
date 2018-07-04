@@ -9,11 +9,10 @@ os:
 
 before_install:
   - git submodule update --init --recursive
-  - echo "upload=${PREBUILD_TOKEN}" > ~/.prebuildrc
 
 script:
   - npm run prebuild
-  - npm run prebuild:upload
+  - npm run prebuild:upload -- -u ${PREBUILD_TOKEN}
 
 branches:
   only:
