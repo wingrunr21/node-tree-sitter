@@ -11,12 +11,7 @@ before_install:
   - git submodule update --init --recursive
 
 script:
-  - npm run prebuild -- -r $PREBUILD_RUNTIME
-  - npm run prebuild:upload -- -u $PREBUILD_TOKEN
-
-env:
-  - PREBUILD_RUNTIME=node
-  - PREBUILD_RUNTIME=electron
+  - npm run prebuild-ci
 
 branches:
   only:
