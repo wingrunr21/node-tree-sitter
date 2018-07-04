@@ -22,6 +22,6 @@
     "prebuild-ci": "^2.2.3"
   },
   "scripts": {
-    "prebuild": "prebuild --all --strip --verbose"
+    "prebuild": "prebuild --strip --verbose"
   }
 }

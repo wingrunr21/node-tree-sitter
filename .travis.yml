@@ -11,11 +11,17 @@ before_install:
   - git submodule update --init --recursive
 
 script:
-  - npm run prebuild -- -r $PREBUILD_RUNTIME
+  - npm run prebuild -- -t $PREBUILD_TARGET -r $PREBUILD_RUNTIME
 
 env:
-  - PREBUILD_RUNTIME=node
-  - PREBUILD_RUNTIME=electron
+  - PREBUILD_RUNTIME=node PREBUILD_TARGET=4
+  - PREBUILD_RUNTIME=node PREBUILD_TARGET=6
+  - PREBUILD_RUNTIME=node PREBUILD_TARGET=8
+  - PREBUILD_RUNTIME=node PREBUILD_TARGET=9
+  - PREBUILD_RUNTIME=node PREBUILD_TARGET=10
+  - PREBUILD_RUNTIME=electron PREBUILD_TARGET=2.0.4
+  - PREBUILD_RUNTIME=electron PREBUILD_TARGET=1.8.7
+  - PREBUILD_RUNTIME=electron PREBUILD_TARGET=1.7.15
 
 branches:
   only:
