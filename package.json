@@ -18,10 +18,10 @@
     "nan": "^2.10.0"
   },
   "devDependencies": {
-    "prebuild": "^7.6.0",
-    "prebuild-ci": "^2.2.3"
+    "prebuild": "^7.6.0"
   },
   "scripts": {
-    "prebuild-ci": "prebuild-ci"
+    "prebuild": "prebuild --all --strip --verbose",
+    "prebuild:upload": "prebuild --upload-all"
   }
 }
