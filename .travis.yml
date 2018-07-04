@@ -9,10 +9,11 @@ os:
 
 before_install:
   - git submodule update --init --recursive
+  - echo "upload=${PREBUILD_TOKEN}" > ~/.prebuildrc
 
 script:
   - npm run prebuild -- -r $PREBUILD_RUNTIME
-  - npm run prebuild:upload -- -u $PREBUILD_TOKEN
+  - npm run prebuild:upload
 
 env:
   - PREBUILD_RUNTIME=node
