@@ -23,6 +23,6 @@
   },
   "scripts": {
     "prebuild": "prebuild --all --strip --verbose",
-    "prebuild:upload": "prebuild --upload -u ${PREBUILD_TOKEN}"
+    "prebuild:upload": "prebuild --upload-all"
   }
 }
