@@ -21,6 +21,7 @@
     "prebuild": "^7.6.0"
   },
   "scripts": {
-    "prebuild": "prebuild --all --strip --verbose"
+    "prebuild": "prebuild --all --strip --verbose",
+    "prebuild:upload": "prebuild --upload"
   }
 }
