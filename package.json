@@ -22,6 +22,7 @@
     "prebuild-ci": "^2.2.3"
   },
   "scripts": {
-    "prebuild": "prebuild --strip --verbose"
+    "prebuild": "prebuild --strip --verbose",
+    "prebuild:upload": "prebuild --upload -u ${PREBUILD_TOKEN}"
   }
 }

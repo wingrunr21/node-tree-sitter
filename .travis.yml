@@ -12,6 +12,7 @@ before_install:
 
 script:
   - npm run prebuild -- -r $PREBUILD_RUNTIME
+  - npm run prebuild:upload
 
 env:
   - PREBUILD_RUNTIME=node
