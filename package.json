@@ -22,6 +22,6 @@
   },
   "scripts": {
     "prebuild": "prebuild --all --strip --verbose",
-    "prebuild:upload": "prebuild --upload"
+    "prebuild:upload": "prebuild --upload-all"
   }
 }
