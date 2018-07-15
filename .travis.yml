@@ -14,7 +14,7 @@ before_install:
 
 script:
   - npm run prebuild
-  - npm run prebuild:upload -- -u ${PREBUILD_UPLOAD}
+  - npm run prebuild:upload -u ${PREBUILD_UPLOAD}
 
 branches:
   only:
