@@ -14,7 +14,7 @@ build: off
 
 test_script:
   - npm run prebuild
-  - npm run prebuild:upload -u $env:PREBUILD_UPLOAD
+  - npm run prebuild:upload -u %PREBUILD_UPLOAD%
 
 branches:
   only:
