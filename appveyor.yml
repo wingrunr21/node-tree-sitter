@@ -12,10 +12,15 @@ install:
 
 build: off
 
-test_script:
+deploy_script:
   - npm run prebuild
   - npm run prebuild:upload -u %PREBUILD_UPLOAD%
 
 branches:
   only:
     - master
+
+deploy:
+  provider: Script
+    on:
+      APPVEYOR_REPO_TAG: true
