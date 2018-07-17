@@ -19,6 +19,7 @@ deploy_script:
 branches:
   only:
     - travis_deploy_test
+    - /v\d+\.\d+\.\d+(?:\-\d+)?/
 
 deploy:
   provider: Script
