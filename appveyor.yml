@@ -22,5 +22,5 @@ branches:
 
 deploy:
   provider: Script
-    on:
-      APPVEYOR_REPO_TAG: true
+  on:
+    APPVEYOR_REPO_TAG: true
