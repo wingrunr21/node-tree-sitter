@@ -18,7 +18,7 @@ deploy_script:
 
 branches:
   only:
-    - master
+    - travis_deploy_test
 
 deploy:
   provider: Script

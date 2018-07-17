@@ -14,7 +14,7 @@ before_install:
 
 branches:
   only:
-    - master
+    - travis_deploy_test
 
 deploy:
   provider: script
@@ -22,5 +22,5 @@ deploy:
     - npm run prebuild
     - npm run prebuild:upload -u ${PREBUILD_UPLOAD}
   on:
-    branch: master
+    branch: travis_deploy_test
     tags: true
