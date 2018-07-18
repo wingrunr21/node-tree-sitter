@@ -25,6 +25,7 @@ branches:
     - /^v.*$/
 
 deploy:
-  provider: Script
+  provider: Environment
+  name: prebuild
   on:
     appveyor_repo_tag: true
