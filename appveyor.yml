@@ -16,11 +16,6 @@ deploy_script:
   - npm run prebuild
   - npm run prebuild:upload -u %PREBUILD_UPLOAD%
 
-branches:
-  only:
-    - travis_deploy_test
-    - /v\d+\.\d+\.\d+(?:\-\d+)?/
-
 deploy:
   provider: Script
   on:
