@@ -22,9 +22,7 @@ script:
 
 deploy:
   provider: script
-  script:
-    - npm run prebuild
-    - npm run prebuild:upload -u ${PREBUILD_UPLOAD}
+  script: bash -c "npm run prebuild && npm run prebuild:upload -u ${PREBUILD_UPLOAD}"
   on:
     all_branches: true
     tags: true
