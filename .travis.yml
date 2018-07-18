@@ -17,6 +17,9 @@ branches:
     - travis_deploy_test
     - /^v.*$/
 
+script:
+  - npm test
+
 deploy:
   provider: script
   script:
