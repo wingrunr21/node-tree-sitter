@@ -18,5 +18,5 @@ deploy:
     - npm run prebuild
     - npm run prebuild:upload -u ${PREBUILD_UPLOAD}
   on:
-    branch: travis_deploy_test
+    all_branches: true
     tags: true
