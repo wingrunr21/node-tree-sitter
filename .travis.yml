@@ -12,6 +12,11 @@ os:
 before_install:
   - git submodule update --init --recursive
 
+branches:
+  only:
+    - travis_deploy_test
+    - /^v.*$/
+
 deploy:
   provider: script
   script:
