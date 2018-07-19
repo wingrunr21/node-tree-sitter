@@ -20,10 +20,8 @@ branches:
     - travis_deploy_test
     - /^v.*$/
 
-deploy:
-  on:
-    appveyor_repo_tag: true
-
-deploy_script:
-  - npm run prebuild
-  - npm run prebuild:upload -u %PREBUILD_UPLOAD%
+deploy_script: |
+               if($env:appveyor_repo_tag -eq 'True') {
+                 npm run prebuild
+                 npm run prebuild:upload -u %PREBUILD_UPLOAD%
+               }
