@@ -15,17 +15,15 @@ build: off
 test_script:
   - npm test
 
-deploy_script:
-  - npm run prebuild
-  - npm run prebuild:upload -u %PREBUILD_UPLOAD%
-
 branches:
   only:
     - travis_deploy_test
     - /^v.*$/
 
 deploy:
-  provider: Environment
-  name: prebuild
   on:
     appveyor_repo_tag: true
+
+deploy_script:
+  - npm run prebuild
+  - npm run prebuild:upload -u %PREBUILD_UPLOAD%
